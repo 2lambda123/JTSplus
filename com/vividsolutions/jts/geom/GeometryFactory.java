@@ -50,6 +50,7 @@ import com.vividsolutions.jts.util.Assert;
  *
  *
  * @version 1.7
+ * @since 1.7
  */
 public class GeometryFactory
     implements Serializable
@@ -71,6 +72,13 @@ public class GeometryFactory
    * PrecisionModel, spatial-reference ID, and CoordinateSequence implementation.
    */
   public GeometryFactory(PrecisionModel precisionModel, int SRID,
+ * Constructs a GeometryFactory that generates Geometries having the given
+ * PrecisionModel, spatial-reference ID, and CoordinateSequence implementation.
+ *
+ * @param precisionModel the PrecisionModel to use
+ * @param SRID the SRID to use
+ * @param coordinateSequenceFactory the CoordinateSequenceFactory to use
+ * @since 1.7
                          CoordinateSequenceFactory coordinateSequenceFactory) {
       this.precisionModel = precisionModel;
       this.coordinateSequenceFactory = coordinateSequenceFactory;
@@ -598,4 +606,3 @@ public class GeometryFactory
   }
 
 }
-
