@@ -61,6 +61,16 @@ import com.vividsolutions.jts.util.*;
  * can produce more robust results.
  *
  * @version 1.7
+ * Builds the buffer geometry for a given input geometry and precision model.
+ * Allows setting the level of approximation for circular arcs,
+ * and the precision model in which to carry out the computation.
+ * <p>
+ * When computing buffers in floating point double-precision
+ * it can happen that the process of iterated noding can fail to converge (terminate).
+ * In this case a {@link TopologyException} will be thrown.
+ * Retrying the computation in a fixed precision
+ * can produce more robust results.
+ *
  */
 class BufferBuilder
 {
